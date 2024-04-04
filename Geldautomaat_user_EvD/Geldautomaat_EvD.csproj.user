@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Pages\geldOpnemen.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\geldStorten.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\mainUserPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\transactionPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\depositPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\showBalance.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\withdrawPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\geldOpnemen.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\geldStorten.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\mainUserPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\transactionPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\depositPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\showBalance.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\withdrawPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

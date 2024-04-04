@@ -1,0 +1,78 @@
+﻿<Page x:Class="Geldautomaat_EvD.Pages.geldStorten"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:Geldautomaat_EvD.Pages"
+      mc:Ignorable="d"
+      d:DesignHeight="450"
+      d:DesignWidth="800"
+      Background="#002147"
+      Title="geldStorten">
+    <Viewbox>
+        <Grid Width="796">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="35px" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Image Source="../Images/bank.png"
+                   HorizontalAlignment="Center"
+                   Height="85"
+                   VerticalAlignment="Top"
+                   Width="390" />
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="320px" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <TextBox HorizontalAlignment="Center"
+                         Grid.Column="1"
+                         TextWrapping="Wrap"
+                         Width="247"
+                         FontSize="16"
+                         x:Name="saldoToevoeging"
+                         Margin="0,128,0,175" />
+                <Label Content="Voer bedrag in om te storten:"
+                       FontSize="16"
+                       HorizontalAlignment="Left"
+                       Foreground="white"
+                       Grid.Column="0"
+                       VerticalAlignment="Top"
+                       Height="28"
+                       Width="220"
+                       Margin="95,123,0,0" />
+                <Button Content="Submit"
+                        Background="#FF008000"
+                        Foreground="White"
+                        BorderBrush="White"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top"
+                        Width="50"
+                        Height="23"
+                        Click="storten_Submit"
+                        Margin="10,128,0,0"
+                        Grid.Column="2" />
+            </Grid>
+            <Button Content="Terug"
+                    x:Name="backBtn"
+                    Background="#FF008000"
+                    Foreground="White"
+                    BorderBrush="White"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Top"
+                    Width="100"
+                    Height="54"
+                    Click="backBtn_Click" />
+            <TextBlock HorizontalAlignment="Left"
+                       Foreground="White"
+                       FontSize="16px"
+                       TextWrapping="Wrap"
+                       Text="Geld storten"
+                       VerticalAlignment="Top"
+                       Width="100"
+                       Margin="363,54,0,0" />
+        </Grid>
+    </Viewbox>
+</Page>

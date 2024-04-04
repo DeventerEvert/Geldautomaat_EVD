@@ -1,0 +1,20 @@
+﻿Geldautomaat_EvD
+1.0.0.0
+
+winexe
+C#
+.cs
+D:\RocMN\Level 9\Geldautomaat_user_EvD\obj\Debug\net8.0-windows\
+Geldautomaat_EvD
+none
+false
+TRACE;DEBUG;NET;NET8_0;NETCOREAPP
+D:\RocMN\Level 9\Geldautomaat_user_EvD\App.xaml
+8899274267
+
+1987737773
+208-1588888548
+MainWindow.xaml;Pages\depositPage.xaml;Pages\geldOpnemen.xaml;Pages\geldStorten.xaml;Pages\mainUserPage.xaml;Pages\showBalance.xaml;Pages\transactionPage.xaml;Pages\withdrawPage.xaml;
+
+False
+
