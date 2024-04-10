@@ -44,7 +44,6 @@ namespace Geldautomaat_admin_EvD.Pages
 				cmd.Parameters.AddWithValue("@adres", adres);
 				cmd.Parameters.AddWithValue("@contactgegevens", contactgegevens);
 				cmd.ExecuteNonQuery();
-				MessageBox.Show("U heeft succesvol een klant toegevoegd");
 			}
 
 			string pincodeHashed;

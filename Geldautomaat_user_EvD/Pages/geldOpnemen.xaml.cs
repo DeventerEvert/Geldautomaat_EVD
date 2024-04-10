@@ -92,7 +92,7 @@ namespace Geldautomaat_EvD.Pages
 						if (CanMakeTransactionToday(opnemenObject.Rekeningnummer))
 						{
 							int maxAmount = 500;
-							if (Convert.ToInt32(saldoToevoeging.Text) <= maxAmount)
+							if (Convert.ToDecimal(saldoToevoeging.Text) <= maxAmount)
 							{
 								opnemenObject.Saldo -= decimal.Parse(saldoToevoeging.Text);
 								string query = "UPDATE rekeningen SET saldo = @saldo WHERE rekeningnummer = @rekeningnummer";

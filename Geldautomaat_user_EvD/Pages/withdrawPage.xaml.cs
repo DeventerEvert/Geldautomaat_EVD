@@ -55,7 +55,6 @@ namespace Geldautomaat_EvD.Pages
 				if (CanMakeTransactionToday(transactieObject.Rekeningnummer))
 				{
 					decimal bedrag = decimal.Parse(button.Tag.ToString());
-
 					var withdrawalTransaction = new transacties
 					{
 						Bedrag = -bedrag,
@@ -118,6 +117,11 @@ namespace Geldautomaat_EvD.Pages
 				MessageBox.Show("U heeft uw limiet van 3 transacties behaald");
 				return;
 			}
+			if (transactieObject.Saldo < 5)
+			{
+				MessageBox.Show("U heeft niet genoeg saldo om geld op te nemen");
+				return;
+			}
 			opnemenHandelen((Button)sender);
 			MessageBox.Show("U heeft 5 euro opgenomen");
 		}
@@ -127,6 +131,11 @@ namespace Geldautomaat_EvD.Pages
 			if (!CanMakeTransactionToday(transactieObject.Rekeningnummer))
 			{
 				MessageBox.Show("U heeft uw limiet van 3 transacties behaald");
+				return;
+			}
+			if (transactieObject.Saldo < 10)
+			{
+				MessageBox.Show("U heeft niet genoeg saldo om geld op te nemen");
 				return;
 			}
 			opnemenHandelen((Button)sender);
@@ -140,6 +149,11 @@ namespace Geldautomaat_EvD.Pages
 				MessageBox.Show("U heeft uw limiet van 3 transacties behaald");
 				return;
 			}
+			if (transactieObject.Saldo < 20)
+			{
+				MessageBox.Show("U heeft niet genoeg saldo om geld op te nemen");
+				return;
+			}
 			opnemenHandelen((Button)sender);
 			MessageBox.Show("U heeft 20 euro opgenomen");
 		}
@@ -151,6 +165,11 @@ namespace Geldautomaat_EvD.Pages
 				MessageBox.Show("U heeft uw limiet van 3 transacties behaald");
 				return;
 			}
+			if (transactieObject.Saldo < 50)
+			{
+				MessageBox.Show("U heeft niet genoeg saldo om geld op te nemen");
+				return;
+			}
 			opnemenHandelen((Button)sender);
 			MessageBox.Show("U heeft 50 euro opgenomen");
 		}
@@ -160,6 +179,11 @@ namespace Geldautomaat_EvD.Pages
 			if (!CanMakeTransactionToday(transactieObject.Rekeningnummer))
 			{
 				MessageBox.Show("U heeft uw limiet van 3 transacties behaald");
+				return;
+			}
+			if(transactieObject.Saldo < 100)
+			{
+				MessageBox.Show("U heeft niet genoeg saldo om geld op te nemen");
 				return;
 			}
 			opnemenHandelen((Button)sender);

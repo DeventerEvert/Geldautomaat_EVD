@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Geldautomaat_admin_EvD
-build_property.ProjectDir = D:\RocMN\Level 9\Geldautomaat_EvD\Geldautomaat_admin_EvD\
+build_property.ProjectDir = D:\RocMN\Level 9\Geldautomaat_EVD\Geldautomaat_admin_EvD\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

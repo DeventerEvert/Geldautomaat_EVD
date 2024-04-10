@@ -264,7 +264,6 @@ namespace Geldautomaat_admin_EvD.Pages
 					// Extract rekeningnummer portion
 					string selectedRekeningnummer = selectedRekeningInfo.Rekeningnummer;
 
-					// Find the corresponding Rekening object and its associated Klant
 					selectedRekening = klantObject.Klanten
 						.SelectMany(klant => klant.rekening)
 						.FirstOrDefault(rekening => rekening.Rekeningnummer == selectedRekeningnummer);
@@ -297,46 +296,6 @@ namespace Geldautomaat_admin_EvD.Pages
 				mainWindow.addAccountFrame.Visibility = Visibility.Visible;
 
 				mainWindow.addAccountFrame.Navigate(addAccountPage);
-			}
-		}
-
-		private void deleteRekening_Click(object sender, RoutedEventArgs e)
-		{
-			if (rekeningListBox.SelectedItem != null)
-			{
-				// Retrieve the selected rekeningnummer
-				string selectedRekeningnummer = rekeningListBox.SelectedItem.ToString();
-
-				// Extract rekeningnummer portion
-				int index = selectedRekeningnummer.IndexOf('-');
-				if (index >= 0)
-				{
-					selectedRekeningnummer = selectedRekeningnummer.Substring(0, index).Trim();
-				}
-
-				// Find the corresponding Rekening object and its associated Klant
-				rekeningen selectedRekening = null;
-				klanten selectedKlant = null;
-				foreach (var klant in klantObject.Klanten)
-				{
-					selectedRekening = klant.rekening.FirstOrDefault(rekening => rekening.Rekeningnummer == selectedRekeningnummer);
-					if (selectedRekening != null)
-					{
-						selectedKlant = klantObject.Klanten.FirstOrDefault(k => k.Klantnummer == selectedRekening.klanten_Klantnummer);
-						break;
-					}
-				}
-
-				if (selectedRekening != null && selectedKlant != null)
-				{
-					string query = "DELETE FROM klanten WHERE Klantnummer = @klantnummer";
-					using (MySqlCommand cmd = new MySqlCommand(query, Controllers.geldautomaat_controller.Connection))
-					{
-						cmd.Parameters.AddWithValue("@klantnummer", selectedKlant.Klantnummer);
-						cmd.ExecuteNonQuery();
-						MessageBox.Show("U heeft succesvol de rekening verwijderd");
-					}
-				}
 			}
 		}
 

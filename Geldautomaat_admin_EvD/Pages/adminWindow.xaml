@@ -124,15 +124,6 @@
                     Foreground="White"
                     BorderBrush="White"
                     Margin="10,32,0,377" />
-            <Button Content="Rekening verwijderen"
-                    HorizontalAlignment="Left"
-                    Margin="10,200,0,209"
-                    Width="125"
-                    Background="#FF008000"
-                    Foreground="White"
-                    BorderBrush="White"
-                    Height="41"
-                    Click="deleteRekening_Click" />
             <Button Content="Klant bewerken"
                     HorizontalAlignment="Left"
                     x:Name="klantBtn"

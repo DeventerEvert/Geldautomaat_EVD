@@ -30,3 +30,4 @@ D:\RocMN\Level 9\Geldautomaat_EvD\Geldautomaat_admin_EvD\obj\Debug\net8.0-window
 D:\RocMN\Level 9\Geldautomaat_EvD\Geldautomaat_admin_EvD\obj\Debug\net8.0-windows\Geldautomaat_admin_EvD.pdb
 D:\RocMN\Level 9\Geldautomaat_EvD\Geldautomaat_admin_EvD\obj\Debug\net8.0-windows\Geldautomaat_admin_EvD.genruntimeconfig.cache
 D:\RocMN\Level 9\Geldautomaat_EvD\Geldautomaat_admin_EvD\obj\Debug\net8.0-windows\ref\Geldautomaat_admin_EvD.dll
+D:\RocMN\Level 9\Geldautomaat_EVD\Geldautomaat_admin_EvD\obj\Debug\net8.0-windows\Geldautomaat_admin_EvD.sourcelink.json
