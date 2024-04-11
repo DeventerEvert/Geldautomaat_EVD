@@ -125,7 +125,7 @@ namespace Geldautomaat_admin_EvD.Pages {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Geldautomaat_admin_EvD;V1.0.0.0;component/pages/adminwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Geldautomaat_admin_EvD;component/pages/adminwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Pages\adminWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

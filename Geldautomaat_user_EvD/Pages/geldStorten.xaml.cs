@@ -30,7 +30,13 @@ namespace Geldautomaat_EvD.Pages
 		}
 		private void storten_Submit(object sender, RoutedEventArgs e)
 		{
-			decimal bedrag = decimal.Parse(saldoToevoeging.Text);
+			decimal bedrag;
+			if (!decimal.TryParse(saldoToevoeging.Text, out bedrag))
+			{
+				MessageBox.Show("Ongeldige invoer voor het bedrag.");
+				return;
+			}
+
 			var depositTransaction = new transacties
 			{
 				Bedrag = bedrag,
