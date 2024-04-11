@@ -50,13 +50,10 @@ namespace Geldautomaat_admin_EvD.Pages
 
 				foreach (var rekening in allRekeningen.Distinct())
 				{
-					// Find the corresponding klant for the current rekening
 					var klant = klantObject.Klanten.FirstOrDefault(k => k.Klantnummer == rekening.klanten_Klantnummer);
 
-					// Check if a corresponding klant is found
 					if (klant != null)
 					{
-						// Create a new RekeningInfo object and add it to the collection
 						RekeningInfo info = new RekeningInfo
 						{
 							Rekeningnummer = rekening.Rekeningnummer,
@@ -64,7 +61,6 @@ namespace Geldautomaat_admin_EvD.Pages
 							Geblockt = rekening.Geblockt
 						};
 
-						// Add the RekeningInfo object to the collection
 						rekeningInfoList.Add(info);
 					}
 				}
@@ -73,22 +69,17 @@ namespace Geldautomaat_admin_EvD.Pages
 				rekeningListBoxBlocked.ItemsSource = rekeningInfoList.Where(info => info.Geblockt);
 			};
 
-			// Create a list to hold RekeningInfo objects
 			ObservableCollection<RekeningInfo> rekeningInfoList = new ObservableCollection<RekeningInfo>();
 
-			// Populate the list with data
 			var allRekeningen = klantObject.Klanten
 				.SelectMany(klant => klant.rekening.Where(rekening => rekening.klanten_Klantnummer == klant.Klantnummer));
 
 			foreach (var rekening in allRekeningen.Distinct())
 			{
-				// Find the corresponding klant for the current rekening
 				var klant = klantObject.Klanten.FirstOrDefault(k => k.Klantnummer == rekening.klanten_Klantnummer);
 
-				// Check if a corresponding klant is found
 				if (klant != null)
 				{
-					// Create a new RekeningInfo object and add it to the collection
 					RekeningInfo info = new RekeningInfo
 					{
 						Rekeningnummer = rekening.Rekeningnummer,
@@ -96,12 +87,10 @@ namespace Geldautomaat_admin_EvD.Pages
 						Geblockt = rekening.Geblockt
 					};
 
-					// Add the RekeningInfo object to the collection
 					rekeningInfoList.Add(info);
 				}
 			}
 
-			// Bind the collection to the ItemsSource property of your ListBox controls
 			rekeningListBox.ItemsSource = rekeningInfoList.Where(info => !info.Geblockt);
 			rekeningListBoxBlocked.ItemsSource = rekeningInfoList.Where(info => info.Geblockt);
 
@@ -191,18 +180,14 @@ namespace Geldautomaat_admin_EvD.Pages
 
 		private void rekeningListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
 		{
-			// Check if an item is selected
 			if (rekeningListBox.SelectedItem != null)
 			{
-				// Retrieve the selected RekeningInfo object
 				RekeningInfo selectedRekeningInfo = rekeningListBox.SelectedItem as RekeningInfo;
 
 				if (selectedRekeningInfo != null)
 				{
-					// Extract rekeningnummer portion
 					string selectedRekeningnummer = selectedRekeningInfo.Rekeningnummer;
 
-					// Find the corresponding Rekening object and its associated Klant
 					selectedRekening = klantObject.Klanten
 						.SelectMany(klant => klant.rekening)
 						.FirstOrDefault(rekening => rekening.Rekeningnummer == selectedRekeningnummer);
@@ -256,12 +241,10 @@ namespace Geldautomaat_admin_EvD.Pages
 		{
 			if (rekeningListBoxBlocked.SelectedItem != null)
 			{
-				// Retrieve the selected RekeningInfo object
 				RekeningInfo selectedRekeningInfo = rekeningListBoxBlocked.SelectedItem as RekeningInfo;
 
 				if (selectedRekeningInfo != null)
 				{
-					// Extract rekeningnummer portion
 					string selectedRekeningnummer = selectedRekeningInfo.Rekeningnummer;
 
 					selectedRekening = klantObject.Klanten

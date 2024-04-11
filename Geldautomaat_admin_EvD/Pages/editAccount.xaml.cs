@@ -61,7 +61,7 @@ namespace Geldautomaat_admin_EvD.Pages
 				using (MySqlCommand cmd = new MySqlCommand(query, Controllers.geldautomaat_controller.Connection))
 				{
 					cmd.Parameters.AddWithValue("@rekeningNmr", rekeningTxt.Text);
-					cmd.Parameters.AddWithValue("@pincode", pincodeHashed); // Use consistent parameter name
+					cmd.Parameters.AddWithValue("@pincode", pincodeHashed);
 					cmd.Parameters.AddWithValue("@id", idLbl.Content);
 					cmd.Parameters.AddWithValue("@Geblockt", bannedCheckbox.IsChecked);
 

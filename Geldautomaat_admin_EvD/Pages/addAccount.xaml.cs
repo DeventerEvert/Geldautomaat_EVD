@@ -62,7 +62,7 @@ namespace Geldautomaat_admin_EvD.Pages
 			using (MySqlCommand cmd = new MySqlCommand(query2, Controllers.geldautomaat_controller.Connection))
 			{
 				cmd.Parameters.AddWithValue("@rekeningnummer", rekeningnummer);
-				cmd.Parameters.AddWithValue("@pincode", pincodeHashed); // Use the hashed pincode
+				cmd.Parameters.AddWithValue("@pincode", pincodeHashed); 
 				cmd.Parameters.AddWithValue("@saldo", 1000);
 				cmd.ExecuteNonQuery();
 				MessageBox.Show("U heeft succesvol een rekening toegevoegd");
